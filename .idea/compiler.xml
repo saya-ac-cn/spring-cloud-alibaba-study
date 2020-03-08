@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cloud-consumer-order1" />
+        <module name="cloud-consumer-order2" />
+        <module name="cloud-consumer-order3" />
+        <module name="cloud-consumer-order4" />
+        <module name="cloud-gateway" />
+        <module name="cloud-provider-payment1" />
+        <module name="cloud-provider-payment2" />
+        <module name="cloud-provider-payment3" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

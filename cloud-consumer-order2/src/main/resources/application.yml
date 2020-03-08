@@ -1,0 +1,10 @@
+server:
+  port: 9002
+spring:
+  application:
+    # 服务别名
+    name: cloud-consumer-order2
+  cloud:
+    zookeeper:
+      # 注册到zookeeper地址
+      connect-string: 172.20.1.151:2181

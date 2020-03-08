@@ -1,0 +1,12 @@
+server:
+  port: 9004
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: true
+    service-url:
+      defaultZone: http://172.20.1.151:8001/eureka
+feign:
+  hystrix:
+    # 在feign中开启Hystrix
+    enabled: true
