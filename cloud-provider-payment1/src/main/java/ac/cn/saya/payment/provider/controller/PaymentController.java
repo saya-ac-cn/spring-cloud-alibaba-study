@@ -20,7 +20,6 @@ import java.util.concurrent.TimeUnit;
  */
 @RestController
 @RequestMapping(value = "/payment")
-@Slf4j
 public class PaymentController {
 
     @Value("${server.port}")
@@ -37,13 +36,12 @@ public class PaymentController {
      * @return
      */
     @PostMapping(value = "create")
-    public Result create(PaymentEntity payment) {
+    public Result<Object> create(PaymentEntity payment) {
         int result = paymentService.create(payment);
-        log.info("*****插入结果: " + result);
         if (result > 0) {
-            return new Result(200, "插入数据库成功,serverPort:" + serverPort, result);
+            return new Result<Object>(200, "插入数据库成功,serverPort:" + serverPort, result);
         }
-        return new Result(500, "插入数据库失败", null);
+        return new Result<Object>(500, "插入数据库失败", null);
     }
 
     /**
@@ -56,7 +54,6 @@ public class PaymentController {
     @GetMapping(value = "get/{id}")
     public Result getPaymentById(@PathVariable("id") Long id) {
         PaymentEntity payment = paymentService.getPaymentById(id);
-        log.info("*****查询结果: " + payment);
         if (payment != null) {
             return new Result(200, "查询成功,serverPort:"+serverPort, payment);
         }

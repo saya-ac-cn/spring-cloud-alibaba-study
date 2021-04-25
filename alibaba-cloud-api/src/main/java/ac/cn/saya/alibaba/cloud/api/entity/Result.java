@@ -19,11 +19,11 @@ import lombok.Setter;
 @AllArgsConstructor
 public class Result<T> {
 
-    private Integer code;
+    private int code;
     private String message;
     private T data;
 
-    public Result(Integer code, String message) {
+    public Result(int code, String message) {
         this.code = code;
         this.message = message;
     }

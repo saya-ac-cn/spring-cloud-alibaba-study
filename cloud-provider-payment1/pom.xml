@@ -12,13 +12,13 @@
 
     <artifactId>cloud-provider-payment1</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <description>支付模块</description>
+    <description>Eureka提供者</description>
 
     <dependencies>
         <dependency>
             <groupId>ac.cn.saya</groupId>
             <artifactId>alibaba-cloud-api</artifactId>
-            <version>${project.version}</version>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
