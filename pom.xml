@@ -21,6 +21,7 @@
         <module>cloud-consumer-order4</module>
         <module>cloud-gateway</module>
         <module>cloud-provider-payment4</module>
+        <module>cloud-consumer-order3</module>
         <module>cloud-consumer-order5</module>
     </modules>
 

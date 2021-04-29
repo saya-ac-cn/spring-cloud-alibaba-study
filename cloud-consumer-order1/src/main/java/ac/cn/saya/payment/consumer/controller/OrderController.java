@@ -40,7 +40,7 @@ public class OrderController {
      * 自定义负载均衡规则
      */
     @Resource
-    private SayaLoadBalancer loadBalancer;
+    private SayaLoadBalancer sayaLoadBalancer;
 
     @Resource
     private DiscoveryClient discoveryClient;
@@ -61,17 +61,19 @@ public class OrderController {
     }
 
     /**
-     * 路由规则: 轮询
+     * 路由规则: 轮询（自定义手写的）
      * /consumer/payment/payment/lb
      * @return
      */
     @GetMapping(value = "/consumer/payment/lb")
     public String getPaymentLB() {
+        // 提取CLOUD-PROVIDER-PAYMENT1集群下所有的机器
         List<ServiceInstance> instances = discoveryClient.getInstances("CLOUD-PROVIDER-PAYMENT1");
         if (instances == null || instances.size() <= 0) {
             return null;
         }
-        ServiceInstance serviceInstance = loadBalancer.instances(instances);
+        // 提取自定义的负载均衡
+        ServiceInstance serviceInstance = sayaLoadBalancer.instances(instances);
         URI uri = serviceInstance.getUri();
         return restTemplate.getForObject(uri + "/payment/lb", String.class);
     }

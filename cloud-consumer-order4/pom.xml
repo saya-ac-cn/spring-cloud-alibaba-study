@@ -10,7 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>cloud-consumer-order4</artifactId>
-    <description>生产者Eureka+Feign+Hystrix</description>
+    <description>生产者Eureka+OpenFeign+Hystrix</description>
     <dependencies>
         <!--hystrix-->
         <dependency>

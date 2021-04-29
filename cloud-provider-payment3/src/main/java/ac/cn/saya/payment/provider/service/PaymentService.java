@@ -73,7 +73,7 @@ public class PaymentService {
             @HystrixProperty(name = "circuitBreaker.errorThresholdPercentage", value = "60")// 失败率达到多少后跳闸
     }
     )
-    public String paymentCircuitBreaker(@PathVariable("id") Integer id) {
+    public String paymentCircuitBreaker(Integer id) {
         if (id < 0) {
             throw new RuntimeException("*****id不能是负数");
         }
@@ -81,7 +81,7 @@ public class PaymentService {
         return Thread.currentThread().getName() + "\t" + "调用成功,流水号:" + serialNumber;
     }
 
-    public String paymentCircuitBreaker_fallback(@PathVariable("id") Integer id) {
+    public String paymentCircuitBreaker_fallback(Integer id) {
         return "id 不能负数,请稍后重试,o(╥﹏╥)o id:" + id;
     }
 

@@ -12,7 +12,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @Description: TODO
  * @Author liunengkai
  * @Date: 2020-03-08 14:02
- * @Description:生产者Eureka+Feign+Hystrix
+ * @Description:生产者Eureka+OpenFeign+Hystrix
  */
 @SpringBootApplication
 @EnableEurekaClient
