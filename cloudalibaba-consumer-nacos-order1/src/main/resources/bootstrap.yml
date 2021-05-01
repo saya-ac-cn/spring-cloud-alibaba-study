@@ -1,0 +1,20 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: nacos-order-consumer1
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 118.24.198.239:8848 #Nacos服务注册中心地址
+      config:
+        server-addr: 118.24.198.239:8848 #Nacos作为配置中心地址
+        file-extension: yaml #指定yaml格式的配置
+        namespace: 173f3e4f-f1e0-410a-b5d3-1a02dbb2a006 #指定使用开发命名空间的配置
+
+
+
+
+
+# ${spring.application.name}-${spring.profile.active}.${spring.cloud.nacos.config.file-extension}
