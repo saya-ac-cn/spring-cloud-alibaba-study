@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @Date: 2020-03-08 11:01
  * @Description:
  */
-@FeignClient(value = "nacos-payment-provider")
+@FeignClient(value = "nacos-payment-provider",fallback = PaymentFallbackService.class)
 public interface PaymentFeignService {
     /**
      * 根据id查询

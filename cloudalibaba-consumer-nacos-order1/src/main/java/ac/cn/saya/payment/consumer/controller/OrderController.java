@@ -27,6 +27,9 @@ public class OrderController {
 
     @GetMapping(value = "/consumer/payment/{id}")
     public String getPaymentById(@PathVariable("id") Long id) {
+        if(id < 0){
+            throw new RuntimeException("没有该id");
+        }
         return paymentFeignService.getPaymentById(id);
     }
 

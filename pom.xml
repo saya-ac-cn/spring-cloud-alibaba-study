@@ -23,6 +23,10 @@
         <module>cloud-provider-payment4</module>
         <module>cloud-consumer-order3</module>
         <module>cloud-consumer-order5</module>
+        <module>cloudalibaba-provider-payment1</module>
+        <module>cloudalibaba-provider-payment2</module>
+        <module>cloudalibaba-consumer-nacos-order1</module>
+        <module>cloudalibaba-sentinel-service</module>
     </modules>
 
     <!--统一管理jar包版本-->

@@ -12,7 +12,23 @@ spring:
         server-addr: 118.24.198.239:8848 #Nacos作为配置中心地址
         file-extension: yaml #指定yaml格式的配置
         namespace: 173f3e4f-f1e0-410a-b5d3-1a02dbb2a006 #指定使用开发命名空间的配置
+    sentinel:
+      transport:
+        #配置Sentinel dashboard地址
+        dashboard: localhost:8080
+        #默认8719端口，假如被占用会自动从8719开始依次+1扫描,直至找到未被占用的端口
+        port: 8719
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+# 激活Sentinel对Feign的支持
+feign:
+  sentinel:
+    enabled: true
 
 
 

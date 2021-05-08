@@ -9,7 +9,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-    defaultZone: http://172.20.1.151:8001/eureka
+      defaultZone: http://eureka.didispace.com/eureka/
   instance:
     instance-id: cloud-consumer-order1
     # 访问路径可以显示ip地址
